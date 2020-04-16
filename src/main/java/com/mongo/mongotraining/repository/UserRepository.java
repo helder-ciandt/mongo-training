@@ -5,8 +5,6 @@ import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Flux;
 
 @Repository
-public interface CustomerRepository extends ReactiveCosmosRepository<Customer, String> {
-
-    Flux<Customer> findByFirstName(String firstName);
-    Flux<Customer> findByLastName(String lastName);
+public interface UserRepository extends ReactiveCosmosRepository<User, String> {
+    Flux<User> findByFirstName(String firstName);
 }
